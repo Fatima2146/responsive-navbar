@@ -1,0 +1,114 @@
+<html>
+<head>
+    <title>Coder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .navbar .logo {
+            font-size: 36px;
+            font-weight: bold;
+            color: yellow;
+        }
+        .navbar .menu {
+            display: flex;
+            gap: 20px;
+        }
+        .navbar .menu a:hover{
+            color: yellow;
+        }
+        .navbar .menu a.active:hover{
+            background-color: rgb(246, 246, 202);
+        }
+        img{
+   width: 1600px;
+    background-size: cover;
+    height: 620px;
+    position: relative;
+    top: -1px;
+}
+        .navbar .menu a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px 15px;
+        }
+        .navbar .menu a.active {
+            background-color: yellow;
+            color: black;
+            border-radius: 5px;
+        }
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+               
+            }
+            .navbar .menu {
+                flex-direction: column;
+                width: 100%;
+                display: none;
+               
+            }
+            .navbar .menu a {
+                width: 100%;
+                text-align: left;
+                padding: 10px 20px;
+            }
+            .navbar .menu a:hover{
+                   color: rgb(0, 0, 0);
+                   background-color:rgb(245, 245, 155);
+            }
+            .menu-toggle {
+                display: block;
+                color: rgb(255, 255, 255);
+            }
+            .menu.active {
+                display: flex;
+            }
+            img{
+               width: 700px;
+               height: 700px;
+               position: relative;
+               left: -45px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">Coder</div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div class="menu">
+            <a href="#" class="active">Home</a>
+            <a href="#">Contact</a>
+            <a href="#">Blogs</a>
+            <a href="#">Docs</a>
+            <a href="#">Why Coder?</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+    <div><img src="./coding2_4x.png" alt=""></div>
+</body>
+</html>
